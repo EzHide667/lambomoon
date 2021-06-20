@@ -25,110 +25,20 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/fire.css" rel="stylesheet">
+  <link href="assets/css/glow.css" rel="stylesheet">
   <link href="assets/css/override.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 
 </head>
 
 <body>
 
-  <!-- Right Navbar  -->
-  <!--<div class="click-closed"></div>
-  / Form Search Star /
-  <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
-    </div>
-    <span class="close-box-collapse right-boxed ion-ios-close"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="Type">Type</label>
-              <select class="form-control form-control-lg form-control-a" id="Type">
-                <option>All Type</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="city">City</label>
-              <select class="form-control form-control-lg form-control-a" id="city">
-                <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bedrooms">Bedrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="garages">Garages</label>
-              <select class="form-control form-control-lg form-control-a" id="garages">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bathrooms">Bathrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="price">Min Price</label>
-              <select class="form-control form-control-lg form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  -->
-  <!-- End Right Navbar -->
-
   <!--  Navbar  -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top border-gradient">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,45 +46,48 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Lambo<span class="color-b">Moon</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+      <div id="tickerDiv" class="d-none d-lg-block">
+        <div class="ticker">
+          <a href="" class="customshadow tickerlist"><img src="/assets/img/tokens/BNB/binance-coin-bnb-logo.svg"
+              class="tokenTicker" />BNB
+            <span id="BNB"></span></a>
+        </div>
+        <div class="ticker">
+          <a href="" class="customshadow tickerlist"><img src="/assets/img/tokens/CAKE/pancakeswap-cake-logo.svg"
+              class="tokenTicker" />CAKE
+            <span id="CAKE"></span></a>
+        </div>
+        <div class="ticker">
+          <a href="" class="customshadow tickerlist"><img src="/assets/img/tokens/LAMBO//lamborghini-vector-logo.svg"
+              class="tokenTicker" id="lamboTicker" />LAMBO
+            <span id="LAMBO"></span></a>
+        </div>
+      </div>
+      <a class="navbar-brand text-brand customshadow" href="index.html" id="navbarLink">
+        <div class="emboss-txt">
+          <a class="navbar-brand text-brand" href="index.html">Lambo<span class="color-b">Moon</span></a>
+        </div>
+      </a>
+      <button type="button" class="btn btn-link navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
+
       </button>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active customshadow" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link customshadow" href="#">About</a>
           </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Property</a>
-          </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link customshadow" href="#">"How-To-Lambo"</a>
           </li>
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="property-single.html">Property Single</a>
-              <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-              <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-            </div>
-          </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link customshadow text-muted disabled">LamboSwap</a>
           </li>
         </ul>
       </div>
-      <!-- 
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>-->
     </div>
   </nav><!-- End Navbar -->
 
@@ -182,22 +95,23 @@
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
       <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-1.jpg)">
-        <div class="overlay overlay-a"></div>
+        <div class="overlay overlay-a border-gradient"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8 container">
                   <div class="intro-body">
-                    <!-- <p class="intro-title-top">
-                      <br> 78345</p> -->
-                    <h1 class="intro-title mb-4">
-                      Grab your
-                      <br> <span class="color-b">Lambo </span>
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="https://exchange.pancakeswap.finance/#/swap"><span class="price-a">Get Lambos</span></a>
-                    </p>
+                    <div class="sliderCard">
+                      <h2 class="intro-title mb-4 customshadow">
+                        Binance<span id="slide-1SpanBNB"></span> SmartChain
+                        <br> <span class="color-b customshadow">DeFi</span>
+                      </h2>
+                      <a href="https://pancakeswap.info/token/0x850994c62fd7077dadfa85b688d4848d45298889"
+                        target="_blank">
+                        <button class="glow-on-hover" type="button">Trade</button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -206,22 +120,22 @@
         </div>
       </div>
       <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-2.jpg)">
-        <div class="overlay overlay-a"></div>
+        <div class="overlay overlay-a border-gradient"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8 container">
                   <div class="intro-body">
-                    <!-- <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p> -->
-                    <h1 class="intro-title mb-4">
-                      We're going
-                      <br> to the <span class="color-b">Moon </span>
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#roadmap"><span class="price-a">Roadmap</span></a>
-                    </p>
+                    <div class="sliderCard">
+                      <h2 class="intro-title mb-4 customshadow">
+                        We're going
+                        <br> to the <span class="color-b">Moon </span>
+                      </h2>
+                      <a href="#roadmap">
+                        <button class="glow-on-hover" type="button" id="roadmapButton">Roadmap</button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,23 +144,21 @@
         </div>
       </div>
       <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-3.jpg)">
-        <div class="overlay overlay-a"></div>
+        <div class="overlay overlay-a border-gradient"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8 container">
                   <div class="intro-body">
-                    <!-- <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p> -->
-                    <h1 class="intro-title mb-4">
-                      Don't miss out
-                      <br> <span class="color-b">NFT's</span> auctions &amp; drops
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a disabled">Coming soon</span></a>
-                    </p>
+                    <div class="sliderCard">
+                      <h2 class="intro-title mb-4 customshadow">
+                        <span class="color-b customshadow">NFT</span> auctions, drops &amp; giveaways.
+                      </h2>
+                      <a href="#roadmap">
+                        <button class="glow-on-hover disabled" type="button" disabled>Comming Soon</button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -255,65 +167,145 @@
         </div>
       </div>
     </div>
-  </div><!-- End Intro Section -->
+  </div>
+  <!-- Carousel -->
 
-  <main id="main">
+  <!-- Main Section -->
+  <main id="mainWindow" class="wrapper aos-init aos-animate">
 
     <!-- Roadmap -->
-    <section class="section-services section-t8" id="roadmap">
+    <section class="section-services container gblk" id="roadmap">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
+          <div class="col-12">
+            <div class="title-wrap sqbg">
               <div class="title-box">
                 <h2 class="title-a">The Roadmap</h2>
               </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <h1 class="largenumbers text-info mb-0"></h1>
-          <p class="text-muted">Trust the plan</p>
-        </div>
-        <ul class="timeline timeline-split">
-          <li class="timeline-item">
-            <div class="timeline-info"><span>Q3 2021</span></div>
+        <section class="container">
+          <ul class="timeline timeline-split list-unstyled row">
+            <li class="timeline-item">
+              <div class="timeline-info customDate"><span>16 June 2021</span></div>
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" data-aos="fade-down">
+                <h3 class="timeline-title"><strong>Token Idea</strong></h3>
+                <p class=" text-justify small">
+                  <strong>Lambo<span class="color-b">Moon</span></strong> is a <em> <strong> DeFi</strong>
+                    <strong>memecoin</strong>
+                    <strong>testcoin</strong></em>
+                  that emerged from worldwide <em><strong>Discord</strong></em>
+                  community.<br />
+                </p>
+                <h4 class="timeline-title">I'm a junior self-made <strong><span class="color-b"><a
+                        href="">Pull-Stack</a></span></strong> Developper</h4>
+                <p class="text-justify small">
+                  On 16th June 2021 we've decided - with internet friends &amp; I - to start this Token.<br />
+                  <span class="line-through">
+                    <a href="https://bscscan.com/token/0x43b3de04866628887d3697deccc80d6feff15c8f"><strong>Alpha
+                        v1</strong></a> contract got realeased within few hours following this
+                    decision, and <strong>now discontinued</strong>.</span><br />
+                </p>
+                <p class="text-justify small">I realised literally 15min after <a
+                    href="https://bscscan.com/token/0x43b3de04866628887d3697deccc80d6feff15c8f"><strong>Alpha
+                      v1</strong></a> deployment contract issues and started working on improvements.
+                </p>
+              </div>
+            </li>
+            <div class="timeline-info customdate"><span>17 June 2021</span></div>
             <div class="timeline-marker"></div>
-            <div class="timeline-content aos-init aos-animate" data-aos="fade-down">
-              <h3 class="timeline-title">Token Launch</h3>
-              <p class=" text-justify small"><strong>Lambo</strong> initialized on <a href="">Pancakeswap</a><br />
-                Airdrops to the community<br />
-                Bought domain name, building website<br />
-                Enabling communitys : discord<br />
-                <a href="">Official Lambo Twitter account created</a>
-              </p>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-info"><span>Q4 2021</span></div>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content aos-init aos-animate" data-aos="fade-down" data-aos-delay="150">
-              <h3 class="timeline-title">DeFi Contract Update</h3>
-              <p class=" text-justify small">The actual <strong>Lambo</strong> has yet no burn nor hodling
-                incentive.<br />
-                Next step : <strong>give more Lambos to hodlers!</strong><br />
-              </p>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-info"><span>Q1 2022</span></div>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content aos-init aos-animate" data-aos="fade-down" data-aos-delay="300">
-              <h3 class="timeline-title">Moon the Lambos &amp; NFT's</h3>
-              <p class="text-justify small">Next step will be listing on major exchanges and
-                <strong>DEX</strong>'s.<br />
-                We will finish our NFT exchange and release our first video game with SafeMoon integrated. We will be
-                expanding the team by 25% and do a community meetup (pending covid restrictions). We will also be
-                integrating with other large exchanges (I.e. Binance, Mandala).
-              </p>
-            </div>
-          </li>
-        </ul>
+            <h3 class="timeline-title"><strong>The day after</strong> : domain name registration &amp; contract
+              update !</h3>
+            <ul class="list-unstyled row">
+              <li class="timeline-item container">
+                <h4><strong>Renounced Ownership &amp; Fair Launch</strong></h4>
+                <div class="row">
+                  <div class="col-12 col-md-4" data-aos="zoom-out-down" id="GIFcontainer">
+                    <img src="/assets/img/roadmap/satan-swab.gif" class="sqbg rounded" id="satanGIF" />
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <p class="text-justify small">
+                      <span class="lettrine">M</span>ost cryptocurrencies - including fiat - are run by some
+                      overlords, such as <a href="#" target="_blank"><strong><span class="color-b">Satan
+                            Swabs</span></strong><sup><strong>[1]</strong></sup></a>
+                      who run <a href="#" target="_blank"><strong><span
+                            class="color-b">XRP</span></strong><sup><strong>[2]</strong></sup></a>, takes
+                      part in the <a href="#" target="_blank"><strong><span
+                            class="color-b">ICP</span></strong><sup><strong>[3]</strong></sup></a> (stake
+                      governance-centralized cloud computing architechture) backed by the
+                      <a href="#" target="_blank"><strong><span
+                            class="color-b">IMF</span></strong><sup><strong>[4]</strong></sup></a>.<br />
+                      Even Ethereum has bad stories on it's back.. And Cardano is also one of their network and it
+                      seems that's what rich people are doing right now. Let me know if you want to know more about
+                      the <strong><span class="color-b"><a href="">#CryptoGate</a></span></strong> !
+                    </p>
+                  </div>
+                </div>
+
+              </li>
+              <li class="timeline-item ">
+                <div class="timeline-info customDate"><span>19 June 2021</span></div>
+                <div class="timeline-marker"></div>
+                <h4><strong>DeFi on Steroids</strong></h4>
+                <div class="row d-flex">
+                  <div class="col-12 col-lg-8">
+                    <p class="text-justify small"><strong><span class="color-b"><a
+                            href="https://pancakeswap.info/token/0x850994c62fd7077dadfa85b688d4848d45298889"
+                            target="_blank">Fair
+                            Launch</a></span></strong> is ensured by
+                      <em><strong><span class="color-b"><a
+                              href="https://bscscan.com/tx/0x2cd6bf2d189bf2247a5dfb13b9e703d5ae95e159fc1fb33fee208ab51e5f9b37"
+                              target="_blank"> locked burnt
+                              liquidities &amp; renounced ownership</a></span></strong></em>.<br />
+                      This last point will take effect as soon the <em>paper-work</em> for listing on Coingecko and
+                      Coinmarketcap is validated. (Actually ongoing)
+                    </p>
+
+                    <div class="container" id="fireContainer">
+                      <div class="fire" id="burnAnim">
+                        <div class="fire-left">
+                          <div class="main-fire"></div>
+                          <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-main">
+                          <div class="main-fire"></div>
+                          <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-right">
+                          <div class="main-fire"></div>
+                          <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-bottom">
+                          <div class="main-fire"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-justify small">
+                      <strong><span class="color-b lettrine"><a href="#">3%
+                          </a></span></strong> of tokens are burnt &amp; reflected towards
+                      <a href="#" target="_blank"><strong><span
+                            class="color-b">ALA</span></strong><sup><strong>[5]</strong></sup></a>
+                      holders during each transations.
+                    </p>
+
+                  </div>
+                  <div class="col-12 col-md-4" data-aos="zoom-out-down" id="GIFcontainer">
+                    <img src="/assets/img/roadmap/heisenberg.gif" class="sqbg rounded" id="satanGIF" />
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+      </div>
+      </li>
+      </ul>
       </div>
       </div>
     </section>
@@ -324,7 +316,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
+            <div class="title-wrap sqbg">
               <div class="title-box">
                 <h2 class="title-a">Core Team</h2>
               </div>
@@ -336,93 +328,98 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-
-            <div class="card-box-d">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Dev</a>
-                </div>
-              </div>
-              <div class="card-img-d">
-                <img src="assets/img/agent-4.jpg" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="agent-single.html" class="link-two">Ez.Pz
-                        <br></a>
-                    </h3>
+        <div class="container d-flex">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-box-d sqbg">
+                <div class="card-header-b">
+                  <div class="card-category-b">
+                    <a href="#" class="category-b">Dev</a>
                   </div>
                 </div>
-                <div class="card-body-d">
-                  <p class="content-d text-white">
-                    Lead Tech developper<br />
-                  <div>
-                    <p class="content-d text-white" aria-hidden="true">Hodler of followings :</p>
-                    <ul class="list-unstyled content-d text-white" aria-hidden="true">
-                      <li>$BTC</li>
-                      <li>$ETH</li>
-                      <li>$RUNE</li>
-                      <li>$BNB</li>
-                      <li>$CAKE</li>
-                      <li>$ARRR</li>
-                    </ul>
-                  </div>
-
-
-                  </p>
-                  <div class="info-agents color-a">
-
-                  </div>
+                <div class="card-img-d">
+                  <img src="assets/img/agent-4.jpg" alt="" class="img-d img-fluid">
                 </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
+                <div class="card-overlay card-overlay-hover">
+                  <div class="card-header-d">
+                    <div class="card-title-d align-self-center">
+                      <h3 class="title-d">
+                        <a href="agent-single.html" class="link-two">EzHide667
+                          <br></a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="card-body-d">
+                    <div>
+                      <div class="container">
+                        <ul class="list-unstyled content-d text-white container d-flex row" aria-hidden="true">
 
-                    <ul class="list-inline">
-                      <!-- <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li> -->
-                      <li class="list-inline-item">
-                        <a href="https://discord.com/users/216171837682483200" class="link-one">
-                          <i class="fab fa-discord" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="https://twitter.com/btc_pz" class="link-one">
-                          <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <!-- <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                        </a>
-                      </li> -->
-                      <!-- <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="fa fa-dribbble" aria-hidden="true"></i>
-                        </a>
-                      </li> -->
-                    </ul>
+                          <li class="col-6">
+                            <p class="content-d text-white" aria-hidden="true"><a class="invertedLink"
+                                href="https://www.investopedia.com/decentralized-finance-defi-5113835"
+                                target="_blank"><strong>DeFi</strong></a>
+                              Enthusiast</p>
+                          </li>
+                          <li class="col-6">
+                            <p class="content-d text-white" aria-hidden="true"><a class="invertedLink"
+                                href="https://www.investopedia.com/decentralized-finance-defi-5113835"
+                                target="_blank"><strong>DeFi</strong></a>
+                              Enthusiast</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                    </p>
+                    <div class="info-agents color-a">
+
+                    </div>
+                  </div>
+                  <div class="card-footer-d">
+                    <div class="socials-footer d-flex justify-content-center">
+
+                      <ul class="list-inline">
+                        <!-- <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                          </a>
+                        </li> -->
+                        <li class="list-inline-item">
+                          <a href="https://discord.com/users/216171837682483200" class="link-one">
+                            <i class="fab fa-discord" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="https://twitter.com/btc_pz" class="link-one">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <!-- <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                          </a>
+                        </li> -->
+                        <!-- <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-dribbble" aria-hidden="true"></i>
+                          </a>
+                        </li> -->
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
-      </div>
       </div>
     </section><!-- End Agents Section -->
 
     <!--  News Section -->
-    
 
-    
+
+
 
   </main><!-- End #main -->
 
@@ -437,15 +434,12 @@
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-                <a href="https://pancakeswap.finance/">PancakeSwap</a> Token aiming to land Lambos on the Moon.
+                <a href="https://pancakeswap.info/token/0x850994c62fd7077dadfa85b688d4848d45298889">PancakeSwap DeFi
+                  Token</a>
               </p>
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
-
-                <!-- <li class="color-a">
-                  <span class="color-text-a">Email .</span> +33 333 33333
-                </li> -->
               </ul>
             </div>
           </div>
@@ -519,13 +513,13 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#" class="text-muted">Terms of use</a>
+                <a href="#" class="text-muted" aria-disabled="true">Terms of use</a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="text-muted">Privacy Policy</a>
+                <a href="#" class="text-muted" aria-disabled="true">Privacy Policy</a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="text-muted">Cookie Policy</a>
+                <a href="#" class="text-muted" aria-disabled="true">Cookie Policy</a>
               </li>
               <!-- <li class="list-inline-item">
                 <a href="#" class="text-muted">Contact</a>
@@ -563,8 +557,9 @@
           </div> -->
           <div class="copyright-footer">
             <p class="copyright color-text-a">
-              &copy; Copyright
-              <span class="color-a">LamboMoon</span> All Rights Reserved.
+              &copy; 2021 Copyright <span class="color-a"><a href="#" disabled><strong>Lambo<span
+                      class="color-b">Moon</strong></span></span></a> All Rights
+              Reserved.
             </p>
           </div>
         </div>
@@ -584,7 +579,11 @@
   <script src="assets/vendor/scrollreveal/scrollreveal.min.js"></script>
 
   <!-- Template Main JS File -->
+  <script>
+    AOS.init();
+  </script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/ticker.js"></script>
 
 </body>
 

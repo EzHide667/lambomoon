@@ -1,3 +1,183 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+.customshadow {
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+.border-gradient {
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+}
+.bsha {
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.5),
+                 0px 8px 13px rgba(0,0,0,0.3),
+                 0px 18px 23px rgba(0,0,0,0.3);
+}
+
+
+div.intro-body {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#sliderDiv {
+    /* position: absolute; */
+    width: 960px !important;
+    /* background-color: rgba(255, 255, 255, .2); */
+}
+
+#tickerDiv {
+    height: 96px;
+    width: 222px;
+    display: flex;
+    flex-direction: column !important;
+    justify-items: center;
+    align-items: left;
+    justify-content: space-between !important;
+    position: absolute;
+    left: 0;
+
+}
+
+.ticker {
+    padding-left: 33px;
+}
+
+.tokenTicker {
+    max-width: 42px;
+    padding-right: 11px;
+    margin-left: 0;
+    display: inline-block;
+}
+
+#slide-1P {
+    font-size: 2.1rem;
+}
+
+#slide-1SpanBNB {
+    height: 72px;
+    content: url("/assets/img/tokens/BNB/binance-coin-bnb-logo.svg");
+    padding-left: 3%;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* #lamboTicker {
+    max-height: 42px;
+} */
+
+div#divTicker > div.ticker {
+    display: inline-block !important;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding-left: 15px;
+}
+
+div.fire#burnAnim{
+    position: absolute;
+    display: inline !important;
+}
+
+
+div#slide-1P > ul.list-unstyled {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.title-wrap {
+    background-color: linear-gradient(0deg, #000, #272727);
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.3),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+a.color-b::hover {
+    color: black !important;
+}
+#GIFcontainer, img#satanGIF {
+    position: relative !important;
+    height: 321px;
+    width: 256px;
+    display: inline-block !important;
+}
+
+.sqbg {
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.lettrine {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+div#overlords {
+    display: flex !important;
+    flex-direction: row !important;
+    line-height: 1.1;
+}
+
+.timeline-item {
+    margin-top: 11px;
+    padding-top: 3px;
+}
+
+a.invertedLink::hover {
+    color: red !important;
+}
+.sliderCard {
+    display: flex;
+    flex-direction: column;
+}
+
+p.intro-subtible {
+    display: block !important;
+}
+
+.line-through {
+    text-decoration-line: line-through;
+}
+
+.title-wrap {
+    display: flex;
+    justify-content: center !important;
+    margin:  0 5px;
+    height: 42px;
+}
+
+#fireContainer {
+    float: left !important;
+    margin-left: -17px !important;
+    margin-top: -2px;
+}
+
+.title-wrap {
+    margin-top: 21px !important;
+}
+.title-box {
+    margin-top: 5px !important;
 }
