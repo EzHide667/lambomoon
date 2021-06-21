@@ -1,0 +1,63 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+.customshadow {
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+.border-gradient {
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+}
+.bsha {
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.5),
+                 0px 8px 13px rgba(0,0,0,0.3),
+                 0px 18px 23px rgba(0,0,0,0.3);
+}
+
+#tickerDiv {
+    height: 96px;
+    width: 222px;
+    display: flex;
+    flex-direction: column !important;
+    justify-items: center;
+    align-items: left;
+    justify-content: space-between !important;
+    position: absolute;
+    left: 0;
+
+}
+
+.ticker {
+    padding-left: 33px;
+}
+
+.tokenTicker {
+    max-width: 42px;
+    padding-right: 11px;
+    margin-left: 0;
+    display: inline-block;
+}
+
+.sqbg {
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.lettrine {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.1;
+}

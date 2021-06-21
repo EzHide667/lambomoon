@@ -1,30 +1,3 @@
-*,*::before,*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
-}
-.customshadow {
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.1),
-                 0px 18px 23px rgba(0,0,0,0.1);
-}
-.border-gradient {
-    border-bottom: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-}
-.bsha {
-    box-shadow: 0px 4px 3px rgba(0,0,0,0.5),
-                 0px 8px 13px rgba(0,0,0,0.3),
-                 0px 18px 23px rgba(0,0,0,0.3);
-}
 
 
 div.intro-body {
@@ -37,30 +10,6 @@ div.intro-body {
     /* position: absolute; */
     width: 960px !important;
     /* background-color: rgba(255, 255, 255, .2); */
-}
-
-#tickerDiv {
-    height: 96px;
-    width: 222px;
-    display: flex;
-    flex-direction: column !important;
-    justify-items: center;
-    align-items: left;
-    justify-content: space-between !important;
-    position: absolute;
-    left: 0;
-
-}
-
-.ticker {
-    padding-left: 33px;
-}
-
-.tokenTicker {
-    max-width: 42px;
-    padding-right: 11px;
-    margin-left: 0;
-    display: inline-block;
 }
 
 #slide-1P {
@@ -116,23 +65,11 @@ div#slide-1P > ul.list-unstyled {
 a.color-b::hover {
     color: black !important;
 }
-#GIFcontainer, img#satanGIF {
+#GIFcontainer, img#satanGIF, img#heisenbergGIF {
     position: relative !important;
     height: 321px;
     width: 256px;
     display: inline-block !important;
-}
-
-.sqbg {
-    border: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-}
-
-.lettrine {
-    font-size: 1.3rem;
-    font-weight: bold;
-    line-height: 1.1;
 }
 
 div#overlords {
@@ -180,4 +117,12 @@ p.intro-subtible {
 }
 .title-box {
     margin-top: 5px !important;
+}
+
+.subTitleH4 {
+    font-size: 16px !important;
+}
+
+h6#rick {
+    margin-top: 11px !important;
 }
