@@ -66,8 +66,7 @@ a.color-b::hover {
 }
 img.customContainer {
     position: relative !important;
-    max-width: fit-content;
-    width: 256px; */
+    width: 256px !important;
     display: inline-block !important;
 }
 
