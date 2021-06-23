@@ -1,5 +1,8 @@
-
-
+/* *,*::before,*::after {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+} */
 div.intro-body {
     display: flex;
     flex-direction: row;
@@ -61,10 +64,10 @@ div#slide-1P > ul.list-unstyled {
 a.color-b::hover {
     color: black !important;
 }
-.GIFcontainer, img#satanGIF, img#heisenbergGIF, img#wenRambo {
+img.customContainer {
     position: relative !important;
-    height: 321px;
-    width: 256px;
+    max-width: fit-content;
+    width: 256px; */
     display: inline-block !important;
 }
 
