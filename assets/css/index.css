@@ -64,12 +64,6 @@ div#slide-1P > ul.list-unstyled {
 a.color-b::hover {
     color: black !important;
 }
-img.customContainer {
-    position: relative !important;
-    width: 256px !important;
-    display: inline-block !important;
-}
-
 div#overlords {
     display: flex !important;
     flex-direction: row !important;
