@@ -61,3 +61,12 @@ html {
     font-weight: bold;
     line-height: 1.1;
 }
+.wrapper {
+    /* position: absolute; */
+    width: 960px !important;
+    /* background-color: rgba(255, 255, 255, .2); */
+}
+
+.flowImg {
+    max-width: 100% !important;
+}
