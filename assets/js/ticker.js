@@ -52,5 +52,7 @@ const update = async () => {
     document.querySelector('#CAKE').innerText = tickers[3].price;
     document.querySelector('#LAMBO').innerText = tickers[4].price;
 }
-
 update();
+setInterval(tick => {
+    update();
+}, 120000);
